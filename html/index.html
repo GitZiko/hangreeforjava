@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+	<div style="text-align : center ;">
+	<link rel="stylesheet" href="buger.css">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hello App Engine</title>
+  </head>
+
+ 	<body onload="welcom()">
+    <h1>Hello App Engine!</h1>
+<!--
+	<form action="http://localhost:8888/testsamplegae" method="GET">
+		<input type="submit" value="入場">
+	</form>
+ -->
+	<!--JavaScript-->
+	<script type = "text/javascript">
+
+			//タイマー表示
+			var i = 1;
+			function welcom(){
+					var t = window.setInterval("change()",1000);
+			}
+			function change(){
+				var elm = document.getElementById("clock");
+				var d = new Date();
+				var str = d.toLocaleTimeString();
+				elm.innerHTML = str;
+			}
+
+			function make_hunbuger(){
+					//window.alert("ハンバーガーを作成します");
+					window.location.href = "make_hunbuger.html";
+			}
+			function add_menu(){
+					//window.alert("メニューに登録します");
+					window.location.href = "add_menu.html";
+			}
+			function remove_menu(){
+					//window.alert("ハンバーガーを削除します");
+					window.location.href = "remove_menu.html";
+			}
+			function show_menu(){
+					//window.alert("メニューを表示します");
+					window.location.href = "show_menu.html";
+			}
+			function finished_make_hunbuger_info(){
+					//window.alert("作成済みハンバーガー一覧を表示します");
+					window.location.href = "finished_make_hunbuger_info.html";
+			}
+			function recipe(){
+					//window.alert("レシピをメールに送信します");
+					window.location.href = "recipe.html";
+			}
+			function info(){
+					//window.alert("レシピをメールに送信します");
+					window.location.href = "web_info.html";
+			}
+	</script>
+
+	</head>
+
+
+	<h3>サーブレット版バーガー作成アプリのサンプル</h3>
+	<h1>メイン画面</h1>
+
+	<p>
+			主人公（あなた）はある地域のハンバーガーショップのオーナーです．
+			オリジナルのハンバーガーを作成し，地域の人に気に入られるようなハンバーガーを売って発展を目指しましょう．
+			自分の作成したオリジナルハンバーガーをWebで公開して多くの人に評価してもらいましょう．
+			作成したハンバーガーのレシピはメールで送ることが出来ます．
+			現実世界で食材を購入し，実際に自分で調理して食べてみては？
+	</p>
+
+	<h3>メニュー</h3>
+		<!-- <form action="http://localhost:8888/testsamplegae" method="GET"> -->
+		<form action="http://hangreeforja.appspot.com/testsamplegae" method="GET">
+			<input type="submit" name = "menu"  value="make_buger" 	style="WIDTH: 150px; HEIGHT: 50px"/>
+			<input type="submit" name = "menu"  value="add_menu" 	style="WIDTH: 150px; HEIGHT: 50px"/><br>
+			<input type="submit" name = "menu"  value="del_menu" 	style="WIDTH: 150px; HEIGHT: 50px"/>
+			<input type="submit" name = "menu"  value="show_menu"  	style="WIDTH: 150px; HEIGHT: 50px"/><br>
+			<input type="submit" name = "menu"  value="show_buger"  style="WIDTH: 150px; HEIGHT: 50px"/>
+			<input type="submit" name = "menu"  value="recipe"    	style="WIDTH: 150px; HEIGHT: 50px"/><br>
+
+	<!--
+		<input type = "button" value="バーガー作成" 	onclick="make_hunbuger()" 				style="WIDTH: 150px; HEIGHT: 50px"/>
+		<input type = "button" value="メニュー追加" 	onclick="add_menu()" 					style="WIDTH: 150px; HEIGHT: 50px"/><br>
+		<input type = "button" value="メニュー削除" 	onclick="remove_menu()" 				style="WIDTH: 150px; HEIGHT: 50px"/>
+		<input type = "button" value="メニュー一覧" 	onclick="show_menu()" 					style="WIDTH: 150px; HEIGHT: 50px"/><br>
+		<input type = "button" value="バーガー一覧" 	onclick="finished_make_hunbuger_info()" style="WIDTH: 150px; HEIGHT: 50px"/>
+		<input type = "button" value="レシピ送信" 		onclick="recipe()" 						style="WIDTH: 150px; HEIGHT: 50px"/><br>
+	 -->
+		<p>現在の時刻</p>
+		<p id ="clock"></p>
+		<h4>ご注意</h4>
+		<p>
+			※このサイトは勉強用に作成したＷｅｂアプリサイトです．静的なＷｅｂページの移動などを行うのみの仕様になっています．
+			サーバー側の処理は実装されていないので，自分の作成されたバーガーが実際に公開される，サーバーに保存されるわけではありません
+		</p>
+		<!--<input type = "submit" value="menu" 			onclick="info()" 				style="WIDTH: 150px; HEIGHT: 50px"/> -->
+		<input type = "submit" name="menu" 	value="info" style="WIDTH: 150px; HEIGHT: 50px"/>
+		</form>
+    <table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>
+      </tr>
+      <tr>
+        <td><a href="testsamplegae">TestSampleGAE</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

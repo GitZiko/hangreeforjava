@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<div style="text-align : center ;">
+	<link rel="stylesheet" href="buger.css">
+		<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+	<head>
+		<meta charset="Shift_JIS">
+		<title>ハンバーガー作成情報画面</title>
+	<script type = "text/javascript">
+			function make(){
+					window.alert("おめでとうございます！新しいハンバーガーが出来ました！");
+					window.location.href = "index.html";
+			}
+			function cancel(){
+					//window.alert("作成画面へ戻ります");
+					window.location.href = "make_hunbuger.html";
+			}
+	</script>
+	</head>
+
+	<body>
+			<h1>ハンバーガー作成情報</h1>
+			<table style="margin-left : auto ; margin-right : auto ; text-align : left ;"border="1">
+				<caption>以下のハンバーガーを作成します</caption>
+					<tr><th> 種類</th><th>具材</th><th>画像（未実装）</th></tr>
+					<tr><th> バンズ上</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> ソース</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> 食材1</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> 食材2</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> 食材3</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> バンズ下</th><th>未実装</th><th>画像（未実装）</th></tr>
+			</table>
+			<br>
+
+			<p>よろしいでしょうか？</p>
+			<input type = "button" value="作成完了" 					onclick="make()" style="WIDTH: 100px; HEIGHT: 50px"/>
+			<input type = "button" value="キャンセル" 					onclick="cancel()" style="WIDTH: 100px; HEIGHT: 50px"/><br>
+	</body>
+</html>

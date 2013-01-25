@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<div style="text-align : center ;">
+	<link rel="stylesheet" href="buger.css">
+	<head>
+		<meta charset="UTF-8">
+		<title>メニュー削除画面</title>
+		<script type = "text/javascript">
+			
+			var buger = ["バーガー1","バーガー2","バーガー3","バーガー4","バーガー5","バーガー6"]
+			
+			function remove(){
+					//window.alert("完了します");
+					window.location.href = "remove_menu_info.html";
+			}
+			function cancel(){
+					//window.alert("メインに戻ります");
+					window.location.href = "index.html";
+			}
+		</script>
+	</head>
+	
+	<body>
+	
+			<h1>メニュー削除</h1>
+			
+			<p>作成したハンバーガーをメニューから削除致します</p>
+			<p>どのハンバーガーを削除しますか？</p>
+			
+			<!--本来はここにユーザーがサーバーにメニューに登録したハンバーガーを表示する-->
+			<select name="buger" size="*">
+				<script type = "text/javascript">
+					for(var i=0; i<buger.length; i++){
+						document.writeln("<option>" + buger[i] + "</option>")
+					}
+				</script>
+			</select>
+			
+			<br>
+			<br>
+			<input type = "button" value="削除" 					onclick="remove()" style="WIDTH: 100px; HEIGHT: 50px"/>
+			<input type = "button" value="戻る" 					onclick="cancel()" style="WIDTH: 100px; HEIGHT: 50px"/><br>
+	</body>
+</html>

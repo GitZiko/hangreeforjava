@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<div style="text-align : center ;">
+	<link rel="stylesheet" href="buger.css">
+	<head>
+		<meta charset="UTF-8">
+		<title>メニュー登録画面</title>
+		<script type = "text/javascript">
+				function sign_up(){
+						window.alert("自分のメニューに新しいハンバーガーが追加されました！");
+						window.location.href = "index.html";
+				}
+				function cancel(){
+						//window.alert("メインに戻ります");
+						window.location.href = "add_menu.html";
+				}
+		</script>
+	</head>
+	
+	<body>
+	
+			<h1>メニュー登録画面</h1>
+			<table style="margin-left : auto ; margin-right : auto ; text-align : left ;"border="1">
+				<caption>以下のハンバーガーをメニューに追加致します</caption>
+					<tr><th> 種類</th><th>具材</th><th>画像（未実装）</th></tr>
+					<tr><th> バンズ上</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> ソース</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> 食材1</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> 食材2</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> 食材3</th><th>未実装</th><th>画像（未実装）</th></tr>
+					<tr><th> バンズ下</th><th>未実装</th><th>画像（未実装）</th></tr>
+			</table>
+			<br>
+			<input type = "button" value="確認" 		onclick="sign_up()" style="WIDTH: 150px; HEIGHT: 50px"/>
+			<input type = "button" value="キャンセル" 	onclick="cancel()" style="WIDTH: 150px; HEIGHT: 50px"/><br>
+	</body>
+</html>

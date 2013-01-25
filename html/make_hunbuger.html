@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<div style="text-align : center ;">
+	<link rel="stylesheet" href="buger.css">
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+		<title>ハンバーガー作成画面</title>
+	<script type = "text/javascript">
+			function make(){
+					//window.alert("完了します");
+					window.location.href = "make_hunbuger_info.html";
+			}
+			function cancel(){
+					//window.alert("メインに戻ります");
+					window.location.href = "index.html";
+			}
+
+			//食材情報
+			var bands = ["ノーマル","セサミバンズ","マフィン","食パン"]
+			var sources = ["ケチャップ","デミグラスソース","マヨネーズ","てりやき"]
+			var foods = ["パティ","レタス","トマト","チキン"]
+
+			//食材
+			var english_bangs 	= ["normal","sesami","mafin","syokupan"]
+			var english_sources = ["ketchup","demi","mayo","teri"]
+			var english_foods 	= ["pathyi","retas","tomato","chikin"]
+
+	</script>
+	</head>
+
+	<body>
+		<!-- <form action="http://localhost:8888/testsamplegae" method="GET"> -->
+			<form action="http://hangreeforja.appspot.com/testsamplegae" method="GET">
+			<h1>ハンバーガー作成</h1>
+			<table style="margin-left : auto ; margin-right : auto ; text-align : left ;"border="1">
+				<caption>オリジナルハンバーガーの作成</caption>
+				<tr><th> 種類</th><th>具材</th><th> 画像（未実装） </th></tr>
+				<tr><th>バンズ上</th>
+									<th>
+										<select name ="bands_up">
+											<script type = "text/javascript">
+												for(var i = 0; i < bands.length; i++){
+													document.writeln("<option value=" + english_bangs[i] + ">" + bands[i] + "</option>")
+												}
+											</script>
+										</select>
+										<br>
+									</th>
+				</tr>
+				<tr><th>ソース</th>
+									<th>
+										<select name ="sources">
+											<script type = "text/javascript">
+												for(var i = 0; i < sources.length; i++){
+													document.writeln("<option value=" + english_sources[i] + ">" + sources[i] + "</option>")
+												}
+											</script>
+										</select>
+
+									</th>
+				</tr>
+				<tr><th>食材1</th>
+									<th>
+										<select name ="foods1">
+											<script type = "text/javascript">
+												for(var i = 0; i < foods.length; i++){
+													document.writeln("<option value=" + english_foods[i] + ">" + foods[i] + "</option>")
+												}
+											</script>
+										</select>
+										<br>
+									</th>
+				</tr>
+				<tr><th>食材2</th>
+									<th>
+										<select name ="foods2">
+											<script type = "text/javascript">
+												for(var i = 0; i < foods.length; i++){
+													document.writeln("<option value=" + english_foods[i] + ">" + foods[i] + "</option>")
+												}
+											</script>
+										</select>
+										<br>
+									</th>
+				</tr>
+				<tr><th>食材3</th>
+									<th>
+										<select name ="foods3">
+											<script type = "text/javascript">
+												for(var i = 0; i < foods.length; i++){
+													document.writeln("<option value=" + english_foods[i] + ">" + foods[i] + "</option>")
+												}
+											</script>
+										</select>
+										<br>
+									</th>
+				</tr>
+				<tr><th>バンズ下</th>
+									<th>
+										<select name ="bands_down">
+											<script type = "text/javascript">
+												for(var i = 0; i < bands.length; i++){
+													document.writeln("<option value=" + english_bangs[i] + ">" + bands[i] + "</option>")
+												}
+											</script>
+										</select>
+										<br>
+									</th>
+				</tr>
+			</table>
+
+			<br>
+			<input type = "submit" name="menu" value="create" style="WIDTH: 100px; HEIGHT: 50px"/>
+			<input type = "submit" name="menu" value="back" style="WIDTH: 100px; HEIGHT: 50px"/><br>
+		<!--
+			<input type = "button" value="作成" 					onclick="make()" style="WIDTH: 100px; HEIGHT: 50px"/>
+			<input type = "button" value="戻る" 					onclick="cancel()" style="WIDTH: 100px; HEIGHT: 50px"/><br>
+		-->
+		</form>
+	</body>
+</html>
